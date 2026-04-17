@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: .
+    env_file:
+      - .env
+    restart: "no"
+    networks:
+      - site_net
+
+networks:
+  site_net:
+    external: true
